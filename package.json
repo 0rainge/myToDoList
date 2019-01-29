@@ -1,0 +1,28 @@
+{
+  "name": "mytodolist",
+  "version": "1.0.0",
+  "description": "a To-Do-List  using nodejs, Express, mongoDB",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0rainge/myToDoList.git"
+  },
+  "author": "guoyucheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0rainge/myToDoList/issues"
+  },
+  "homepage": "https://github.com/0rainge/myToDoList#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
