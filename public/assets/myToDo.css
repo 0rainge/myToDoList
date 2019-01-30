@@ -1,5 +1,5 @@
 body {
-    background: #181c22;
+    background: #445fd6;
     font-family: tahoma;
     color: #989898;
 }
@@ -7,12 +7,12 @@ body {
 #todo-tb {
     position: relative;
     width: 50%;
-    background: #090d13;
+    background: #743b71;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 #todo-tb form:after {
@@ -26,7 +26,7 @@ body {
 input[type="text"] {
     width: 30%;
     padding: 20px;
-    background: #181c22;
+    background: #e4e0e0;
     border: 0;
     float: center;
     font-size: 20px;
@@ -38,7 +38,7 @@ button {
     padding: 20px;
     width: 30%;
     float: center;
-    background: #23282e;
+    background: #555247;
     border: 0;
     box-sizing: border-box;
     color: #fff;
