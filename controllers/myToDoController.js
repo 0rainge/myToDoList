@@ -1,16 +1,3 @@
- var data = [{
-     item: '好好学习'
- }, {
-     item: '锻炼身体'
- }, {
-     item: '作息规律'
- }, {
-     item: '早日暴富'
- }, {
-     item: '养大猫咪'
- }];
-
-
  var bodyParser = require('body-parser');
 
  var urlencodedParser = bodyParser.urlencoded({extended: false});
@@ -21,22 +8,27 @@
 
  var flagSchema = new mongoose.Schema({
      item:String
- })
+ })     
 
  var Flag = mongoose.model('Flag',flagSchema)
 
- var flagOne = Flag({item:'多喝水 '}).save(function(err){
-     if(err) throw err;
-     console.log('已保存: item saved');
- })
-
+//  var flagOne = Flag({item:'多喝水 '}).save(function(err){
+//      if(err) throw err;
+//      console.log('已保存: item saved');
+//  })
+//  var data = [{item: '好好学习'}, {item: '锻炼身体'}, {item: '作息规律'}, {item: '早日暴富'}, {item: '养大猫咪'}];
+ 
 
 
  module.exports = function (app) {
      app.get('/todo', function (req, res) {
-         res.render('myTodo', {
-             flags: data
+         Flag.find({},function(err,data){
+            if(err) throw err;
+            res.render('myTodo',{flags:data});
          });
+        //  res.render('myTodo', {
+        //      flags: data
+        //  });
      });
      app.post('/todo', urlencodedParser, function (req, res) {
          data.push(req.body);
