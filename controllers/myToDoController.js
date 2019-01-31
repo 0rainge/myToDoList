@@ -10,15 +10,27 @@
      item: '养大猫咪'
  }];
 
-//  var data = [{
-//     item: 'get milk'
-// }];
 
  var bodyParser = require('body-parser');
 
- var urlencodedParser = bodyParser.urlencoded({
-     extended: false
- });
+ var urlencodedParser = bodyParser.urlencoded({extended: false});
+
+ var mongoose = require('mongoose');
+  
+ mongoose.connect('mongodb://test:test666@ds117545.mlab.com:17545/flag')
+
+ var flagSchema = new mongoose.Schema({
+     item:String
+ })
+
+ var Flag = mongoose.model('Flag',flagSchema)
+
+ var flagOne = Flag({item:'多喝水 '}).save(function(err){
+     if(err) throw err;
+     console.log('已保存: item saved');
+ })
+
+
 
  module.exports = function (app) {
      app.get('/todo', function (req, res) {

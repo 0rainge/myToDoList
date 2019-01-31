@@ -21,7 +21,6 @@ $(function () {
         });
 
 
-
         $('li').on('click', function() {
             var item = $(this).text().trim().replace(/ /g, "-");
             $.ajax({
