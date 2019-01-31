@@ -20,8 +20,6 @@
  //  })
  //  var data = [{item: '好好学习'}, {item: '锻炼身体'}, {item: '作息规律'}, {item: '早日暴富'}, {item: '养大猫咪'}];
 
-
-
  module.exports = function (app) {
 
      app.get('/todo', function (req, res) {
@@ -30,9 +28,7 @@
          //  });
          Flag.find({}, function (err, data) {
              if (err) throw err;
-             res.render('myTodo', {
-                 flags: data
-             });
+             res.render('myTodo', {flags: data});
          });
 
      });
@@ -46,7 +42,6 @@
 
 
      });
-
 
      app.delete('/todo/:item', function (req, res) {
          //  data = data.filter(function (flags) {
