@@ -20,10 +20,13 @@
             <button type="submit">立个flag</button>
         </form>
         <ul>
-            <li>早睡早起</li>
+            <!-- <li>早睡早起</li>
             <li>锻炼身体</li>
             <li>好好学习</li>
-            <li>养大猫咪</li>
+            <li>养大猫咪</li> -->
+            <% flags.forEach(function(flag){ %>
+                <li><%= flag .item %></li>
+            <% }) %>
         </ul>
     </div>
 </body>
